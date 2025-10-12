@@ -27,9 +27,9 @@ public class Product {
     private Integer quantity = 0;
 
     @CreationTimestamp
-    private Instant createdOn;
+    private Instant created_on;
 
     @UpdateTimestamp
-    private Instant lastUpdatedOn;
+    private Instant updated_on;
 
 }

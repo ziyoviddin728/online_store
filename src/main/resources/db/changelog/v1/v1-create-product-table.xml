@@ -4,17 +4,17 @@
                     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
     <changeSet id="v1-create-product" author="Ziyoviddin">
         <createTable tableName="products">
-            <column name="id" type="bigint">
-                <constraints primaryKey="true"/>
+            <column name="id" type="bigserial" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="name" type="varchar(50)">
-                <constraints nullable="true"/>
+                <constraints nullable="false"/>
             </column>
             <column name="description" type="text">
-                <constraints nullable="true"/>
+                <constraints nullable="false"/>
             </column>
             <column name="price" type="decimal(10,2)">
-                <constraints nullable="true"/>
+                <constraints nullable="false"/>
             </column>
             <column name="quantity" type="int" defaultValue="0">
                 <constraints nullable="false" checkConstraint="quantity >= 0"/>
